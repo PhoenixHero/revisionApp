@@ -1,6 +1,7 @@
 #include "file.h"
 
 #include <fstream>
+#include <string>
 
 std::string ln;
 void in(std::string file)
