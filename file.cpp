@@ -1,5 +1,4 @@
-#include "file.h"
-#include <fstream>
+#include "include.h"
 
 std::string ln, temp;
 void file::in(std::string file)

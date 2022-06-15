@@ -1,5 +1,5 @@
-#ifndef fileh
-#define fileh
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <map>
@@ -11,4 +11,3 @@ public:
     std::map<int, std::string> place;
     void in(std::string file);
 };
-#endif

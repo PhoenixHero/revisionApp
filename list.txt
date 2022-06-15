@@ -1,3 +1,3 @@
 abiotic:non-living factors of a biome
 biotic:living factors of a biome
-climate:rainfall and temp of location
+climate:temp and rainfall of a location
