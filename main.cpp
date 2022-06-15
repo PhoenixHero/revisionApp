@@ -3,7 +3,7 @@ file f;
 int a;
 std::string in;
 
-int main()
+int main(int argc, char* argv)
 {
     std::cout << "What would you like to do? ";
     std::cin >> in;
