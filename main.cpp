@@ -1,22 +1,32 @@
 #include "include.h"
 file f;
 int a;
+std::string in;
 
 int main()
 {
-    srand(time(0));
-    f.in("list.txt");
-    for(auto x: f.list)
-    {
-        int i;
-        f.prog[x.first] = 0;
-        f.place[i] = x.first;
-        i++;
+    std::cout << "What would you like to do? ";
+    std::cin >> in;
+    if(in == "m") {
+        std::cout << "What is the list name?";
+        std::cin >> in;
+        while (a != 1)
+        {
+            f.in(in);
+            for(auto x: f.list)
+            {
+                int i;
+                f.prog[x.first] = 0;
+                f.place[i] = x.first;
+                i++;
+            }
+            for(auto x : f.place){}
+            system("cls");
+            a = memorise(f);
+        }
     }
-    for(auto x : f.place){}
-    while (a != 1)
+    else if(in == "c")
     {
-    system("cls");
-    a = memorise(f);
+        create();
     }
 }

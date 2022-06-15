@@ -1,7 +1,7 @@
 #include "include.h"
-
 int memorise(file f)
 {  
+    srand(time(0));
     std::string temp, in;
     int ran = rand() % f.list.size();
     temp = f.place[ran];

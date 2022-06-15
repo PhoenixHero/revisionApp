@@ -1,11 +1,11 @@
 build:
-	g++ *.cpp -static
+	g++ *.cpp -static -o test.exe
 	make run
 release:
-	g++ *.cpp -static -O3
+	g++ *.cpp -static -O2 -o release.exe
 
 run:
-	./a.exe
+	./test.exe
 
 clean:
-	rm a.exe
+	rm *.exe
