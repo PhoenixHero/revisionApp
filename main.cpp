@@ -1,4 +1,7 @@
 #include "file.h"
+#include <random>
+#include <time.h>
+#include <string>
 
 file f;
 
@@ -6,26 +9,35 @@ int main()
 {
     srand(time(0));
     f.in("list.txt");
-    for(auto x: list)
+    for(auto x: f.list)
     {
         int i;
-        prog[x.first] = 0;
-        place[i] = x.first;
+        f.prog[x.first] = 0;
+        f.place[i] = x.first;
         i++;
     }
-    std::string temp, in;
-    while(true){
-    temp = place[rand() % list.size()];
-    std::cout << temp << "\n";
-    std::cout << temp;
-    std::cin >> in;
-    if(in == list[temp])
+    for(auto x : f.place)
     {
-        std::cout << "correct!\n";
+        //std::cout << x.first << "\n";
+    }
+    std::string temp, in;
+    while(true){   
+    system("cls");
+    int ran = rand() % f.list.size();
+    temp = f.place[ran];
+    std::cout << temp << "\n";
+    std::getline(std::cin, in);
+    if(in == "stop")
+        break;
+    else if(in == f.list[temp])
+    {
+        std::cout << "correct!\n\n";
+        _sleep(500);
     }
     else
     {
-        std::cout << "incorrect\n";
+        std::cout << "incorrect\ncorrect answer is : " << f.list[temp] << "\n\n";
+        _sleep(3000);
     }
     }
 }
