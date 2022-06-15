@@ -10,6 +10,7 @@ int main()
     if(in == "m") {
         std::cout << "What is the list name?";
         std::cin >> in;
+        in += ".list";
         while (a != 1)
         {
             f.in(in);
