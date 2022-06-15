@@ -1,3 +1,3 @@
 #pragma once
 
-void memorise(file f);
+int memorise(file f);

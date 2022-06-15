@@ -1,5 +1,6 @@
 #include "include.h"
 file f;
+int a;
 
 int main()
 {
@@ -13,9 +14,9 @@ int main()
         i++;
     }
     for(auto x : f.place){}
-    while (true)
+    while (a != 1)
     {
     system("cls");
-    memorise(f);
+    a = memorise(f);
     }
 }

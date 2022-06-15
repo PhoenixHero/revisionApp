@@ -1,7 +1,6 @@
 build:
 	g++ *.cpp -static
 	make run
-	make clean
 release:
 	g++ *.cpp -static -O3
 
